@@ -1,0 +1,10 @@
+.section-about {
+    background-color: #68c74d;
+    grid-column: center-start / center-end;
+}
+
+.text__content {
+    &--sub {
+        font-size: 1.9rem;
+    }
+}

@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // font-size: 62.5%;
+    font-size: 75%;
+}
+
+body {
+    box-sizing: border-box;
+    // padding: 3rem;
+}
+
+// for later maybe
+// ::selection {
+//     background-color: $color-primary;
+//     color: $color-white;
+// }
+
+// 20vw doesnt work apparently
+.container {
+    display: grid;
+    grid-template-rows: 95vh repeat(3, min-content);
+    grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+
+    row-gap: 5rem;
+
+    & > * {
+        padding: 4rem;
+    }
+}
