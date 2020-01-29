@@ -1,10 +1,16 @@
 .section-about {
-    background-color: #68c74d;
-    grid-column: center-start / center-end;
+    border: 1px solid #68c74d;
+    grid-column: col-start 1 / col-end 6;
 }
 
 .text__content {
+    display: grid;
+    justify-items: start;
+    row-gap: 5rem;
+
     &--sub {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        width: 85%;
     }
 }
