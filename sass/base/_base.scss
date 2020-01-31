@@ -41,7 +41,7 @@ body {
 // 20vw doesnt work apparently
 .container {
     display: grid;
-    grid-template-rows: 100vh repeat(2, min-content) 90vh 40vh;
+    grid-template-rows: 100vh repeat(2, min-content) min-content 40vh;
     grid-template-columns: 
         [full-start] minmax(6rem, 1fr) 
         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
