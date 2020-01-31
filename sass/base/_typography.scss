@@ -2,7 +2,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #68c74d;
+    color: $color-primary;
 }
 
 .heading-primary {
@@ -17,6 +17,26 @@ body {
 .heading-secondary {
     font-size: 4.5rem;
     font-weight: 200;
-    text-align: center;
     letter-spacing: 5px;
+}
+
+.heading-tertiary {
+    font-size: 1.8rem;
+    font-weight: 200;
+    letter-spacing: 7px;
+}
+
+.heading-about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-primary-dark;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 10rem;
+        height: 1px;
+        background-color: $color-primary;
+    }
 }

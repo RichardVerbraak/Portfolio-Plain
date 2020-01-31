@@ -1,4 +1,24 @@
-.section-portfolio {
-    background-color: #68c74d;
-    grid-column: center-start / center-end;
+.portfolio {
+    background-image: linear-gradient(rgba($color-primary, .8)), url(/img/portfolio-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: full-start / full-end;
+    padding: 2rem;
+    color: #fff;
+
+    display: grid;
+    
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+
+        gap: 6rem;
+
+        &--item {
+            display: grid;
+            justify-content: start;
+            padding: 2rem;
+            border: 1px solid #fff;
+        }
+    }
 }

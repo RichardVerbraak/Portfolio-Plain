@@ -1,4 +1,40 @@
 .footer {
     background-color: #333;
     grid-column: full-start / full-end;
+    padding: 3rem;
+
+    &__logo-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        justify-items: center;
+
+        &--logo {
+            fill: #fff;
+            width: 4rem;
+            height: 4rem;
+            line-height: 1;
+        }
+    }
+}
+
+.test {
+    grid-column: center-start / center-end;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    span {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 200;
+    }
+
+    span::after {
+        content: "";
+        background-color: $color-primary;
+        height: 1px;
+        width: 60rem;
+        display: block;
+    }
 }

@@ -1,16 +1,35 @@
-.section-about {
-    border: 1px solid #68c74d;
+// Create animation on content view
+
+.about__content {
     grid-column: col-start 1 / col-end 6;
-}
 
-.text__content {
     display: grid;
-    justify-items: start;
-    row-gap: 5rem;
-
-    &--sub {
+    justify-items: start;    
+    row-gap: 5rem; 
+    border: 1px solid $color-primary;
+    padding: 3.5rem;
+    margin: 15rem 0;
+    
+    &--text {
         font-size: 1.6rem;
         line-height: 2.5rem;
-        width: 85%;
+        width: 85%;   
     }
 }
+
+// .about__pictures {
+//     grid-column: 8 / 10;
+//     display: grid;
+//     grid-template-columns: repeat(4, minmax(1fr);
+//     grid-template-rows: repeat(4, 1fr);
+
+    
+//     &--1 {
+//         grid-row: 2 / 4;
+//         grid-column: 2 / 5;
+//         display: block;
+//         object-fit: cover;
+//         height: 100%;
+//         width: 100%;
+//     }
+// }

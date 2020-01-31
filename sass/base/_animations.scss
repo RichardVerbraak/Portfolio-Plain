@@ -65,3 +65,26 @@
         transform: translate(0);
     }
 }
+
+@keyframes arrowBounce {
+    0% {
+        transform: translateY(0)
+    }
+
+    40% {
+        transform: translateY(5px);
+    }
+
+    60% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes downArrow {
+    0% { -webkit-transform: translateY(0); opacity: 0 }
+    100% { -webkit-transform: translateY(0.4em); opacity: 0.9 }
+  }

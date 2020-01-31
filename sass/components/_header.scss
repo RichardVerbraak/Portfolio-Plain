@@ -9,7 +9,6 @@
     // box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     
     display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
 
@@ -88,11 +87,18 @@
         font-weight: 300;
     }
 
-    // &__arrow {
-    //     fill: #fff;
-    //     height: 2.5rem;
-    //     width: 2.5rem;
-    // }
+    &__svg-box {
+        position: absolute;
+        bottom: 10%;
+    }
+
+    &__arrow {        
+        fill: #fff;
+        height: 3rem;
+        width: 3rem;
+        opacity: 0;
+        
+        animation: 0.8s downArrow 1.5s  infinite alternate ease-in-out;
+    }
 
 }
-
