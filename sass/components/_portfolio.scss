@@ -8,14 +8,12 @@
 
     display: grid;
     
-    &__box {
-        
+    &__box {        
         display: grid;
         justify-content: center;
         
         grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
         grid-template-rows: repeat(2, minmax(min-content, 25rem));
-
         gap: 5rem;
 
         &--item {
@@ -25,11 +23,13 @@
             justify-items: center;
             grid-template-rows: repeat(3, 1fr);
             grid-template-columns: 1fr;
-            background-image: linear-gradient(-60deg,  rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 49.9%, transparent 50%);
-            background-size: 230%;
-            justify-content: start;
+                       
             padding: 2rem;
             border: 1px solid #fff;
+
+            // Sets up the gradient animation
+            background-image: linear-gradient(-60deg,  rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 49.9%, transparent 50%);
+            background-size: 240%;
             transition: background-position 1.1s ease-out;
 
             &:hover {
@@ -49,6 +49,11 @@
             }
         }       
     }
+
+    // Keep the 2x2 grid
+    // @media screen and (max-width: $bp-1200) {
+    //     grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+    // }   
 }
 
 .heading-portfolio {
@@ -67,11 +72,19 @@
 }
 
 .portfolio-btn {
+    align-self: center;
     text-decoration: none;
     color: #fff;
+    padding: .8rem 3rem;
     background-color: $color-primary;
     opacity: 0;
     visibility: none;
+    transform: translateY(.5rem);
     transition: all .8s cubic-bezier(0.645, 0.045, 0.355, 1);
     display: inline-block;
+
+    &:hover {
+        background-color: $color-primary-dark;
+        transform: translateY(0rem);
+    }
 }

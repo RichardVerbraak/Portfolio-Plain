@@ -13,8 +13,24 @@
     &--text {
         font-size: 1.6rem;
         line-height: 2.5rem;
-        width: 85%;   
+        width: 80%;   
     }
+
+    &--span {
+        font-weight: bold;
+        border-bottom: 1px $color-primary solid;
+    }
+
+    @media screen and (max-width: $bp-900) {
+        grid-column: col-start 2 / col-end 7;
+        justify-items: center;
+        padding: 3rem;
+        margin: 10rem 0;
+    }   
+}
+
+.skills-text {
+    width: 90%;
 }
 
 // .about__pictures {

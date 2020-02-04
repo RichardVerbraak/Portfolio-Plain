@@ -18,7 +18,7 @@
 
             <div class="header__main-box">
                 <p class="header__sub">Web Developer</p>       
-                <h1 class="header__main heading-primary">John Doe</h1>
+                <h1 class="header__main">Richard Verbraak</h1>
             </div>
 
             <!-- <div class="header__text-box">
@@ -26,16 +26,16 @@
                 <p class="header__text">Portfolio</p>
                 <p class="header__text">Contact</p>                    
             </div> -->
-
+            
             <div class="header__svg-box">
                 <svg class="header__arrow">
                     <use xlink:href="img/sprite.svg#icon-chevron-thin-down"></use>
-                </svg>
+                </svg>           
             </div>
 
         </header>         
 
-        <div class="about__content">
+        <div id="about" class="about__content">
             <h1 class="heading-secondary heading-about-me">About Me</h1>
             <p class="about__content--text">
                 Hi, my name is [redacted] and I'm an aspiring Web Developer from the Netherlands. I got hooked the moment I started learning about Web Development,
@@ -48,10 +48,17 @@
         
         <div class="skills__content">
             <h1 class="heading-secondary heading-about-me">Skills</h1>
-            <p class="about__content--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsum non, ex ipsa iusto, 
-                quos molestiae totam temporibus porro aliquam perspiciatis. Nulla eum voluptas animi magnam. Dignissimos cupiditate nesciunt voluptatibus?
-                Ad ipsum non, ex ipsa iusto, quos molestiae totam.  Nulla eum voluptas animi magnam.
+            <p class="about__content--text skills-text">
+                I have solid knowledge of <span class="about__content--span">HTML5</span>,
+                <span class="about__content--span">CSS3</span> 
+                and
+                <span class="about__content--span">JavaScript</span>.
+                I primarily use <span class="about__content--span">Sass</span> for styling, which makes developing a lot easier with it's nesting, variables and mixins.
+                I also have experience with <span class="about__content--span">React.js</span> 
+                and I am familiar with libraries like <span class="about__content--span">React-Redux</span> and <span class="about__content--span">React-Router</span>.
+                For tooling I primarily use <span class="about__content--span">NPM</span> and <span class="about__content--span">Git</span>. 
+                And my go to for writing tests in either JS or React is a testing framework called <span class="about__content--span">Jest</span>.
+             </p>
         </div>
 
         <div class="portfolio">
@@ -60,37 +67,40 @@
                 <div class="portfolio__box--item">
                     <h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
                     <h2 class="heading-secondary heading-portfolio">Expensify</h2>
-                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes. </p>
-                    <!-- <a class="portfolio-btn" href="https://rv-expensify-app.herokuapp.com/dashboard">Go To</a> -->
+                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes.</p>
+                    <a class="portfolio-btn" href="https://rv-expensify-app.herokuapp.com/dashboard">Go To</a>
                 </div>
 
                 <div class="portfolio__box--item">
                     <h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
                     <h2 class="heading-secondary heading-portfolio">Expensify</h2>
-                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes. </p>
+                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes.</p>
+                    <a class="portfolio-btn" href="https://rv-expensify-app.herokuapp.com/dashboard">Go To</a>
                 </div>
 
                 <div class="portfolio__box--item">
                     <h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
                     <h2 class="heading-secondary heading-portfolio">Expensify</h2>
-                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes. </p>
+                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes.</p>
+                    <a class="portfolio-btn" href="https://rv-expensify-app.herokuapp.com/dashboard">Go To</a>
                 </div>
 
                 <div class="portfolio__box--item">
                     <h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
                     <h2 class="heading-secondary heading-portfolio">Expensify</h2>
-                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes. </p>
+                    <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes.</p>
+                    <a class="portfolio-btn" href="https://rv-expensify-app.herokuapp.com/dashboard">Go To</a>
                 </div>
 
             </div>
         </div>
 
-        <div class="test">
-            <span>Contact Me</span>
+        <div class="contact">
+            <h3 class="contact__text">Contact Me</h3>
         </div>
         
 
-        <!-- Temporary Icons and Links -->
+        <!-- Temporary Icons and Links / Add target__blank -->
         <footer class="footer">
             <div class="footer__logo-box">
                 <a href="#">

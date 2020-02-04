@@ -1,3 +1,5 @@
+// Maybe add all 3 icons under each other in mobile view
+
 .footer {
     background-color: #333;
     grid-column: full-start / full-end;
@@ -17,24 +19,26 @@
     }
 }
 
-.test {
+.contact {
     grid-column: center-start / center-end;
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
 
-    span {
-        text-align: center;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         font-size: 3rem;
         font-weight: 200;
-    }
 
-    span::after {
-        content: "";
-        background-color: $color-primary;
-        height: 1px;
-        width: 60rem;
-        display: block;
-    }
+        &::after {
+            content: "";
+            background-color: $color-primary;
+            height: 1px;
+            width: 10rem;
+            display: inline-block;
+        }
+    }    
 }

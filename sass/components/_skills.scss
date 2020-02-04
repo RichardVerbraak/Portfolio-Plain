@@ -13,4 +13,10 @@
         line-height: 2.5rem;
         width: 85%;   
     }
+
+    @media screen and (max-width: $bp-900) {
+        grid-column: col-start 2 / col-end 7;
+        justify-items: center;
+        padding: 3rem
+    }  
 }

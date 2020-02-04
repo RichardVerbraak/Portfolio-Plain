@@ -7,23 +7,14 @@
 }
 
 html {
-    // font-size: 62.5%;
-    font-size: 75%;
+    font-size: 62.5%;
 
-    @media screen and (max-width: $bp-1300) {
-        font-size: 62.5%;
-    }
+    @media screen and (min-width: $bp-1800) {
+        font-size: 75%;
+    }       
 
-    @media screen and (max-width: 56.25em) {
+    @media screen and (max-width: $bp-1000) {
         font-size: 50%;
-    }
-
-    @media screen and (max-width: 50em) {
-        font-size: 42.5%;
-    }
-    
-    @media screen and (max-width: 37.5em) {
-        font-size: 37.5%;
     }
 }
 
@@ -38,12 +29,24 @@ body {
     color: #fff;
 }
 
-// 20vw doesnt work apparently
+// 5 columns of 20vw doesnt fill the whole screen
 .container {
     display: grid;
-    grid-template-rows: 100vh repeat(2, min-content) min-content 40vh;
+    grid-template-rows: 100vh repeat(2, min-content) min-content 30vh;
     grid-template-columns: 
         [full-start] minmax(6rem, 1fr) 
         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
-        minmax(6rem, 1fr) [full-end];    
+        minmax(6rem, 1fr) [full-end];
+        
+    @media screen and (max-width: $bp-1100) {
+        grid-template-rows: 90vh repeat(2, min-content) min-content 30vh;
+    }
+
+    @media screen and (max-width: $bp-1000) {
+        grid-template-rows: 85vh repeat(2, min-content) min-content 30vh;
+    }
+
+    @media screen and (max-width: $bp-800) {
+        grid-template-rows: 60vh repeat(2, min-content) min-content 30vh;
+    }
 }
