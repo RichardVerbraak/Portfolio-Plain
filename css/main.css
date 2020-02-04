@@ -19,7 +19,7 @@ html {
 
 @media screen and (max-width: 62.5em) {
   html {
-    font-size: 50%;
+    font-size: 52.5%;
   }
 }
 
@@ -270,6 +270,12 @@ body {
   font-size: 4.5rem;
   font-weight: 200;
   letter-spacing: 5px;
+}
+
+@media screen and (max-width: 50em) {
+  .heading-secondary {
+    font-size: 4rem;
+  }
 }
 
 .heading-tertiary {
@@ -533,6 +539,14 @@ body {
   }
 }
 
+@media screen and (max-width: 37.5em) {
+  .about__content {
+    grid-column: col-start 1 / col-end 8;
+    row-gap: 3rem;
+    padding: 3rem 2rem;
+  }
+}
+
 .skills-text {
   width: 90%;
 }
@@ -559,6 +573,14 @@ body {
     grid-column: col-start 2 / col-end 7;
     justify-items: center;
     padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .skills__content {
+    grid-column: col-start 1 / col-end 8;
+    row-gap: 3rem;
+    padding: 3rem 2rem;
   }
 }
 

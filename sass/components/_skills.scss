@@ -18,5 +18,11 @@
         grid-column: col-start 2 / col-end 7;
         justify-items: center;
         padding: 3rem
-    }  
+    }
+    
+    @media screen and (max-width: $bp-600) {
+        grid-column: col-start 1 / col-end 8;
+        row-gap: 3rem;
+        padding: 3rem 2rem;
+    } 
 }

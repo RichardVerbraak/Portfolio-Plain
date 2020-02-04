@@ -9,7 +9,11 @@ body {
 .heading-secondary {
     font-size: 4.5rem;
     font-weight: 200;
-    letter-spacing: 5px;   
+    letter-spacing: 5px;
+    
+    @media screen and (max-width: $bp-800) {
+        font-size: 4rem;
+    } 
 }
 
 .heading-tertiary {

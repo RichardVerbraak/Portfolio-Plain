@@ -26,6 +26,12 @@
         justify-items: center;
         padding: 3rem;
         margin: 10rem 0;
+    }
+
+    @media screen and (max-width: $bp-600) {
+        grid-column: col-start 1 / col-end 8;
+        row-gap: 3rem;
+        padding: 3rem 2rem;
     }   
 }
 
