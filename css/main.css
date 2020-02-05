@@ -654,6 +654,9 @@ body {
   background-size: 255%;
   -webkit-transition: background-position 1.1s ease-out;
   transition: background-position 1.1s ease-out;
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .portfolio__item:hover {
@@ -689,6 +692,9 @@ body {
   visibility: hidden;
   -webkit-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   color: #68c74d;
 }
 
@@ -703,6 +709,9 @@ body {
           transform: translateY(0.5rem);
   -webkit-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   display: inline-block;
 }
 
