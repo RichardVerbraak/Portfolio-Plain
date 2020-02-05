@@ -327,8 +327,8 @@ body {
 }
 
 .header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 199, 77, 0.7)), to(rgba(82, 177, 56, 0.5))), url(/img/hero-resized.jpg);
-  background-image: linear-gradient(rgba(104, 199, 77, 0.7), rgba(82, 177, 56, 0.5)), url(/img/hero-resized.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 199, 77, 0.7)), to(rgba(82, 177, 56, 0.5))), url(/img/hero.jpg);
+  background-image: linear-gradient(rgba(104, 199, 77, 0.7), rgba(82, 177, 56, 0.5)), url(/img/hero.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -605,8 +605,8 @@ body {
 }
 
 .portfolio {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 199, 77, 0.8))), url(/img/brugtest.jpg);
-  background-image: linear-gradient(rgba(104, 199, 77, 0.8)), url(/img/brugtest.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 199, 77, 0.8))), url(/img/portfolio-bg.jpg);
+  background-image: linear-gradient(rgba(104, 199, 77, 0.8)), url(/img/portfolio-bg.jpg);
   background-position: center;
   background-size: cover;
   grid-column: full-start / full-end;
