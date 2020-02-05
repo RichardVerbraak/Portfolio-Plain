@@ -9,8 +9,9 @@ $color-tertiary: #fdc620;
 $color-tertiary-dark: #e6b010;
 
 // Media Breakpoints
-$bp-480: 30em;      // Header adjustments, again..
+$bp-480: 30em;      // Header adjustments and tertiary heading
 $bp-600: 37.5em;    // Again make header elements smaller
+$bp-700: 43.75em;   // Portfolio 1 column media query
 $bp-800: 50em;      // Make header smaller
 $bp-900: 56.25em;   // Single column layout from here on out
 $bp-1000: 62.5em;   // Adjusting font-sizes

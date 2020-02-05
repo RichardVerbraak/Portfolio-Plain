@@ -13,13 +13,21 @@ body {
     
     @media screen and (max-width: $bp-800) {
         font-size: 4rem;
-    } 
+    }
+    
+    @media screen and (max-width: $bp-480) {
+        letter-spacing: 2px;
+    }
 }
 
 .heading-tertiary {
     font-size: 1.8rem;
     font-weight: 200;
     letter-spacing: 7px;
+
+    @media screen and (max-width: $bp-480) {
+        letter-spacing: 2px;
+    }
 }
 
 .heading-about-me {

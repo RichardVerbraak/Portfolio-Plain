@@ -1,3 +1,5 @@
+// Remember to properly set up the columns next time
+
 .portfolio {
     background-image: linear-gradient(rgba($color-primary, .8)), url(/img/portfolio-bg.jpg);
     background-position: center;
@@ -6,49 +8,58 @@
 
     padding: 7rem;
     color: #fff;
-
-    display: grid;
     
-    &__box {        
+    display: grid;    
+    justify-content: center;
+    gap: 5rem;
+
+    grid-template-columns: repeat(2, 50%);
+
+    @media screen and (max-width: $bp-600) {
+        padding: 3.5rem;
+    }
+
+    @media screen and (max-width: $bp-700) {
+        grid-template-columns: 1fr;
+    }
+
+    
+
+    &__item {        
+        position: relative;       
         display: grid;
-        justify-content: center;
-        
-        grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
-        grid-template-rows: repeat(2, minmax(min-content, 25rem));
-        gap: 5rem;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
 
-        &--item {
-            position: relative;
-            
-            display: grid;
-            justify-items: center;
-            grid-template-rows: repeat(3, 1fr);
-            grid-template-columns: 1fr;
-                       
-            padding: 2rem;
-            border: 1px solid #fff;
+        padding: 2rem;
+        border: 1px solid #fff;
+        height: 30rem;
 
-            // Sets up the gradient animation
-            background-image: linear-gradient(-60deg,  rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 49.9%, transparent 50%);
-            background-size: 240%;
-            transition: background-position 1.1s ease-out;
+        // Sets up the gradient animation (240%)
+        background-image: linear-gradient(-60deg,  rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 49.9%, transparent 50%);
+        background-size: 255%;
+        transition: background-position 1.1s ease-out;
 
-            &:hover {
-                background-position: 100%;                
-            }
+        &:hover {
+            background-position: 100%;                
+        }
 
-            &:hover > .heading-portfolio {
-                opacity: 0;
-            }
+        &:hover > .heading-portfolio {
+            opacity: 0;
+            visibility: hidden;
+        }
 
-            &:hover > .portfolio-text {
-                opacity: 1;
-            }
+        &:hover > .portfolio-text {
+            opacity: 1;
+            visibility: visible;
+        }
 
-            &:hover > .portfolio-btn {
-                opacity: 1;
-            }
-        }       
+        &:hover > .portfolio-btn {
+            opacity: 1;
+            visibility: visible;
+        }
+               
     }
 
     // Keep the 2x2 grid
@@ -67,19 +78,18 @@
    left: 0;
    padding: 3rem;
    opacity: 0;
-   visibility: none;
+   visibility: hidden;
    transition: all .8s cubic-bezier(0.645, 0.045, 0.355, 1);
    color: $color-primary;
 }
 
 .portfolio-btn {
-    align-self: center;
     text-decoration: none;
     color: #fff;
     padding: .8rem 3rem;
     background-color: $color-primary;
     opacity: 0;
-    visibility: none;
+    visibility: hidden;
     transform: translateY(.5rem);
     transition: all .8s cubic-bezier(0.645, 0.045, 0.355, 1);
     display: inline-block;
