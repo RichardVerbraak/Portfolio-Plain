@@ -327,8 +327,8 @@ body {
 }
 
 .header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 199, 77, 0.7)), to(rgba(82, 177, 56, 0.5))), url(/img/hero-2.jpg);
-  background-image: linear-gradient(rgba(104, 199, 77, 0.7), rgba(82, 177, 56, 0.5)), url(/img/hero-2.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 199, 77, 0.7)), to(rgba(82, 177, 56, 0.5))), url(/img/hero-resized.jpg);
+  background-image: linear-gradient(rgba(104, 199, 77, 0.7), rgba(82, 177, 56, 0.5)), url(/img/hero-resized.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -618,8 +618,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5rem;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
+  -ms-grid-columns: (40%)[2];
+      grid-template-columns: repeat(2, 40%);
 }
 
 @media screen and (max-width: 37.5em) {

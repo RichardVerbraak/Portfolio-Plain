@@ -13,7 +13,7 @@
     justify-content: center;
     gap: 5rem;
 
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 40%);
 
     @media screen and (max-width: $bp-600) {
         padding: 3.5rem;
