@@ -4,41 +4,36 @@
     background-color: #333;
     grid-column: full-start / full-end;
     padding: 3rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
 
     &__logo-box {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-        justify-items: center;
+        // margin: 0 auto;
+        // width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        // margin-bottom: 2rem;
 
         &--logo {
             fill: #fff;
-            width: 4rem;
-            height: 4rem;
+            width: 5rem;
+            height: 5rem;
+            opacity: 0.75;
             line-height: 1;
+            transition: all .2s;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
-}
 
-.contact {
-    grid-column: center-start / center-end;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        font-size: 3rem;
-        font-weight: 200;
-
-        &::after {
-            content: "";
-            background-color: $color-primary;
-            height: 1px;
-            width: 10rem;
-            display: inline-block;
-        }
-    }    
+    &__copyright {
+        color: #fff;
+        letter-spacing: 3px;
+        text-align: center;
+    }
 }

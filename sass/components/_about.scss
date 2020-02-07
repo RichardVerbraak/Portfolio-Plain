@@ -25,7 +25,8 @@
         grid-column: col-start 2 / col-end 7;
         justify-items: center;
         padding: 3rem;
-        margin: 10rem 0;
+        margin-top: 10rem;
+        margin-bottom: 7.5rem;
     }
 
     @media screen and (max-width: $bp-600) {

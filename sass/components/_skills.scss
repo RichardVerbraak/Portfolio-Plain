@@ -11,18 +11,19 @@
     &--text {
         font-size: 1.6rem;
         line-height: 2.5rem;
-        width: 85%;   
+        width: 85%;        
     }
 
     @media screen and (max-width: $bp-900) {
         grid-column: col-start 2 / col-end 7;
         justify-items: center;
-        padding: 3rem
+        padding: 3rem;
+        margin-bottom: 10rem;
     }
     
     @media screen and (max-width: $bp-600) {
         grid-column: col-start 1 / col-end 8;
         row-gap: 3rem;
         padding: 3rem 2rem;
-    } 
+    }
 }

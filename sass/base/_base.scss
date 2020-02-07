@@ -32,7 +32,7 @@ body {
 // 5 columns of 20vw doesnt fill the whole screen
 .container {
     display: grid;
-    grid-template-rows: 100vh repeat(2, min-content) min-content 30vh;
+    grid-template-rows: 100vh repeat(2, min-content) min-content 25vh;
     grid-template-columns: 
         [full-start] minmax(6rem, 1fr) 
         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 

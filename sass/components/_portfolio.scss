@@ -1,4 +1,5 @@
 // Remember to properly set up the columns next time
+// Added in CSS hack that accelerates hardware for fixing laggy transitions, not sure if it works
 
 .portfolio {
     background-image: linear-gradient(rgba($color-primary, .8)), url(/img/portfolio-bg.jpg);
@@ -19,7 +20,7 @@
         padding: 3.5rem;
     }
 
-    @media screen and (max-width: $bp-700) {
+    @media screen and (max-width: $bp-800) {
         grid-template-columns: 1fr;
     }
     
@@ -29,7 +30,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        flex-direction: column;
+        grid-template-rows: min-content 1fr;
 
         padding: 2rem;
         border: 1px solid #fff;
@@ -61,17 +62,11 @@
             visibility: visible;
         }
 
-        &:hover > .portfolio-btn {
+        &:hover > .portfolio__links > .portfolio__links-btn {
             opacity: 1;
             visibility: visible;
-        }
-               
-    }
-
-    // Keep the 2x2 grid
-    // @media screen and (max-width: $bp-1200) {
-    //     grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
-    // }   
+        }       
+    } 
 }
 
 .heading-portfolio {
@@ -96,26 +91,47 @@
    color: $color-primary;
 }
 
-.portfolio-btn {
-    text-decoration: none;
-    color: #fff;
-    padding: .8rem 3rem;
-    background-color: $color-primary;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(.5rem);
-    transition: all .8s cubic-bezier(0.645, 0.045, 0.355, 1);
+.portfolio__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 4rem;
+        text-decoration: none;
+        color: #fff;
+        background-color: $color-primary;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(.5rem);
+        transition: all .8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-    /* Enable hardware acceleration to fix laggy transitions */
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    display: inline-block;
+        /* Enable hardware acceleration to fix laggy transitions */
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
 
-    &:hover {
-        background-color: $color-primary-dark;
-        transform: translateY(0rem);
+        &:hover {
+            background-color: $color-primary-dark;
+            transform: translateY(0rem);
+        }
+
+        &--2 {
+            line-height: 0;
+        }
+    }
+
+    &-logo {
+        display: inline-block;
+        height: 2.5rem;
+        width: 100%;
+        fill: #fff;
     }
 }
