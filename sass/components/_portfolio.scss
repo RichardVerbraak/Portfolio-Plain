@@ -91,11 +91,12 @@
    color: $color-primary;
 }
 
-.portfolio__links {
-    display: flex;
+.portfolio__links { 
+    display: flex;   
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    
     
     &-btn {
         display: flex;
@@ -106,6 +107,7 @@
         text-decoration: none;
         color: #fff;
         background-color: $color-primary;
+        padding: 2rem;
         opacity: 0;
         visibility: hidden;
         transform: translateY(.5rem);

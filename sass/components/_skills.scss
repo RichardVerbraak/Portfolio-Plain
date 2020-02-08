@@ -27,3 +27,11 @@
         padding: 3rem 2rem;
     }
 }
+
+.skills-text {
+    width: 90%;
+
+    @media screen and (max-width: $bp-400) {
+        width: 95%;
+    }   
+}

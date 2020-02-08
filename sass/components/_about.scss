@@ -13,7 +13,11 @@
     &--text {
         font-size: 1.6rem;
         line-height: 2.5rem;
-        width: 80%;   
+        width: 80%;            
+        
+        @media screen and (max-width: $bp-400) {
+            width: 95%;
+        }       
     }
 
     &--span {
@@ -35,24 +39,3 @@
         padding: 3rem 2rem;
     }   
 }
-
-.skills-text {
-    width: 90%;
-}
-
-// .about__pictures {
-//     grid-column: 8 / 10;
-//     display: grid;
-//     grid-template-columns: repeat(4, minmax(1fr);
-//     grid-template-rows: repeat(4, 1fr);
-
-    
-//     &--1 {
-//         grid-row: 2 / 4;
-//         grid-column: 2 / 5;
-//         display: block;
-//         object-fit: cover;
-//         height: 100%;
-//         width: 100%;
-//     }
-// }
