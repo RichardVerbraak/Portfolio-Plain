@@ -803,7 +803,7 @@ body {
 
 .contact__text::after {
   content: "";
-  background-color: #68c74d;
+  background-color: #088400;
   height: 1px;
   width: 10rem;
   display: inline-block;
