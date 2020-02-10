@@ -8,6 +8,10 @@ $color-secondary-dark: #08a81d;
 $color-tertiary: #fdc620;
 $color-tertiary-dark: #e6b010;
 
+// Better readability (contrast ratio guidelines)
+$color-text: #088400;
+$color-text-span: #2da20d;
+
 // Media Breakpoints
 $bp-400: 25em;
 $bp-480: 30em;      // Header adjustments and tertiary heading
