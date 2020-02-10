@@ -1,13 +1,15 @@
-// Create animation on content view
-
-.about__content {
-    grid-column: col-start 1 / col-end 6;
-
+.content {
     display: grid;
     justify-items: start;    
     row-gap: 5rem; 
     border: 1px solid $color-primary;
     padding: 3.5rem;
+    margin-bottom: 15rem;    
+}
+
+.about__content {
+    grid-column: col-start 1 / col-end 6;
+    
     margin: 15rem 0;
     
     &--text {
@@ -32,11 +34,42 @@
         padding: 3rem;
         margin-top: 10rem;
         margin-bottom: 7.5rem;
+        row-gap: 3rem;
+    }
+    
+    @media screen and (max-width: $bp-600) {
+        grid-column: col-start 1 / col-end 8;        
+        padding: 3rem 2rem;
+    }
+}
+
+.skills__content {
+    grid-column: col-start 3 / col-end 8;    
+    
+    &--text {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        width: 85%;        
     }
 
-    @media screen and (max-width: $bp-600) {
-        grid-column: col-start 1 / col-end 8;
+    @media screen and (max-width: $bp-900) {
+        grid-column: col-start 2 / col-end 7;
+        justify-items: center;
+        padding: 3rem;
+        margin-bottom: 10rem;
         row-gap: 3rem;
+    }
+    
+    @media screen and (max-width: $bp-600) {
+        grid-column: col-start 1 / col-end 8;        
         padding: 3rem 2rem;
+    }
+}
+
+.skills-text {
+    width: 90%;
+
+    @media screen and (max-width: $bp-400) {
+        width: 95%;
     }   
 }
