@@ -745,13 +745,15 @@ body {
   text-decoration: none;
   color: #fff;
   background-color: #68c74d;
+  -webkit-box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
+          box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
   padding: 2rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateY(0.5rem);
-          transform: translateY(0.5rem);
-  -webkit-transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
+  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
+  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s;
+  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s, -webkit-transform 0.4s;
   /* Enable hardware acceleration to fix laggy transitions */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -759,8 +761,13 @@ body {
 
 .portfolio__links-btn:hover {
   background-color: #52b138;
-  -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.portfolio__links-btn:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .portfolio__links-btn--2 {
