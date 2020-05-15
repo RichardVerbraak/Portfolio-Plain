@@ -1,139 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-        <title>Portfolio</title>
-    </head>
-    <body class="container">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+		<title>Portfolio</title>
+	</head>
+	<body class="container">
+		<header class="header">
+			<div class="header__main-box">
+				<p class="header__sub">Web Developer</p>
+				<h1 class="header__main">Richard Verbraak</h1>
+			</div>
 
-        <header class="header">
-            <div class="header__main-box">
-                <p class="header__sub">Web Developer</p>       
-                <h1 class="header__main">Richard Verbraak</h1>
-            </div>
-            
-            <div class="header__svg-box">
-                <svg class="header__arrow">
-                    <use xlink:href="/img/sprite.svg#icon-chevron-thin-down"></use>
-                </svg>           
-            </div>
-        </header>         
+			<div class="header__svg-box">
+				<svg class="header__arrow">
+					<use xlink:href="/img/sprite.svg#icon-chevron-thin-down"></use>
+				</svg>
+			</div>
+		</header>
 
-        <div id="about" class="content about__content">
-            <h1 class="heading-secondary heading-content">About Me</h1>
-            <p class="about__content--text">
-                Hi, my name is Richard Verbraak and I'm an aspiring Web Developer from the Netherlands. I got hooked the moment I started learning about Web Development,
-                which was back at the start of February, 2019.
-                I'm 100% focused on Front-End thus far, although I am interested in learning Back-End tech like NodeJS, Express or MongoDB.
-                I am fond of making minimalistic type of designs and creating sleek animations without them being too obtrusive.
-                Outside of all this, I enjoy playing games and watch TV Shows & Movies.
-            </p>
-        </div>
-        
-        <div class="content skills__content">
-            <h1 class="heading-secondary heading-content">Skills</h1>
-            <p class="about__content--text skills-text">
-                I have solid knowledge of <span class="about__content--span">HTML5</span>,
-                <span class="about__content--span">CSS3</span> 
-                and
-                <span class="about__content--span">JavaScript</span>.
-                I primarily use <span class="about__content--span">Sass</span> for styling, which makes developing a lot easier with it's nesting, variables and mixins.
-                I also have experience with <span class="about__content--span">React.js</span> 
-                and I am familiar with libraries like <span class="about__content--span">React-Redux</span> and <span class="about__content--span">React-Router</span>.
-                For tooling I primarily use <span class="about__content--span">NPM</span> and <span class="about__content--span">Git</span>. 
-                And my go to for writing tests in either JS or React is a testing framework called <span class="about__content--span">Jest</span>.
-             </p>
-        </div>
+		<div id="about" class="content about__content">
+			<h1 class="heading-secondary heading-content">About Me</h1>
+			<p class="about__content--text">
+				Hi, my name is Richard Verbraak and I'm an aspiring Web Developer from
+				the Netherlands. I got hooked the moment I started learning about Web
+				Development, which was back at the start of February, 2019. I'm 100%
+				focused on Front-End thus far, although I am interested in learning
+				Back-End tech like NodeJS, Express or MongoDB. I am fond of making
+				minimalistic type of designs and creating sleek animations without them
+				being too obtrusive. Outside of all this, I enjoy playing games and
+				watch TV Shows & Movies.
+			</p>
+		</div>
 
-        <div class="portfolio">
-            <div class="portfolio__item">
-                <h3 class="heading-tertiary heading-portfolio">Save delicious recipes</h3>
-                <h2 class="heading-secondary heading-portfolio">Recipe App</h2>
-                <p class="portfolio-text">Earliest project of mine. Lets you create and save your favorite recipes. You can add the necessary steps in order to make the recipe and track which ingredients are needed. This is all done in plain JS and makes use of localStorage.</p>
-                <div class="portfolio__links">
-                    <a class="portfolio__links-btn portfolio__links-btn--1" href="https://rv-recipeapp.netlify.com/" target="_blank">Site</a>
-                    <a class="portfolio__links-btn portfolio__links-btn--2" href="https://github.com/RichardVerbraak/Recipe-App-Remastered" target="_blank">
-                        <svg class="portfolio__links-logo">
-                            <use xlink:href="/img/sprite.svg#icon-code"></use>
-                        </svg>
-                    </a>
-                </div>                
-            </div>
+		<div class="content skills__content">
+			<h1 class="heading-secondary heading-content">Skills</h1>
+			<p class="about__content--text skills-text">
+				I have solid knowledge of
+				<span class="about__content--span">HTML5</span>,
+				<span class="about__content--span">CSS3</span>
+				and
+				<span class="about__content--span">JavaScript</span>. I primarily use
+				<span class="about__content--span">Sass</span> for styling, which makes
+				developing a lot easier with it's nesting, variables and mixins. I also
+				have experience with
+				<span class="about__content--span">React.js</span> and I am familiar
+				with libraries like
+				<span class="about__content--span">React-Redux</span> and
+				<span class="about__content--span">React-Router</span>. For tooling I
+				primarily use <span class="about__content--span">NPM</span> and
+				<span class="about__content--span">Git</span>. And my go to for writing
+				tests in either JS or React is a testing framework called
+				<span class="about__content--span">Jest</span>.
+			</p>
+		</div>
 
-            <div class="portfolio__item">
-                <h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
-                <h2 class="heading-secondary heading-portfolio">Expensify</h2>
-                <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes.</p>
-                <div class="portfolio__links">
-                    <a class="portfolio__links-btn portfolio__links-btn--1" href="https://rv-expensify-app.herokuapp.com/" target="_blank">Site</a>
-                    <a class="portfolio__links-btn portfolio__links-btn--2" href="https://github.com/RichardVerbraak/react-course-2-expensify-app" target="_blank">
-                        <svg class="portfolio__links-logo">
-                            <use xlink:href="/img/sprite.svg#icon-code"></use>
-                        </svg>
-                    </a>
-                </div>   
-            </div>
+		<div class="portfolio">
+			<div class="portfolio__item">
+				<h3 class="heading-tertiary heading-portfolio">
+					Save delicious recipes
+				</h3>
+				<h2 class="heading-secondary heading-portfolio">Recipe App</h2>
+				<p class="portfolio-text">
+					Earliest project of mine. Lets you create and save your favorite
+					recipes. You can add the necessary steps in order to make the recipe
+					and track which ingredients are needed. This is all done in plain JS
+					and makes use of localStorage.
+				</p>
+				<div class="portfolio__links">
+					<a
+						class="portfolio__links-btn portfolio__links-btn--1"
+						href="https://rv-recipeapp.netlify.com/"
+						target="_blank"
+						>Site</a
+					>
+					<a
+						class="portfolio__links-btn portfolio__links-btn--2"
+						href="https://github.com/RichardVerbraak/Recipe-App-Remastered"
+						target="_blank"
+					>
+						<svg class="portfolio__links-logo">
+							<use xlink:href="/img/sprite.svg#icon-code"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
 
-            <div class="portfolio__item">
-                <h3 class="heading-tertiary heading-portfolio">Find your favorite movies</h3>
-                <h2 class="heading-secondary heading-portfolio">Vizier</h2>
-                <p class="portfolio-text">A React.js project I'm currently working on. It involves the MovieDB API and will show you the latest popular movies, their rating, actors and description. You can follow my progress as soon as I initialised the repo on GitHub.</p>
-                <div class="portfolio__links">
-                    <a class="portfolio__links-btn portfolio__links-btn--1" href="https://rv-vizier.netlify.app/" target="_blank">Site</a>
-                    <a class="portfolio__links-btn portfolio__links-btn--2" href="https://github.com/RichardVerbraak/Vizier" target="_blank">
-                        <svg class="portfolio__links-logo">
-                            <use xlink:href="/img/sprite.svg#icon-code"></use>
-                        </svg>
-                    </a>
-                </div>   
-            </div>
+			<div class="portfolio__item">
+				<h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
+				<h2 class="heading-secondary heading-portfolio">Expensify</h2>
+				<p class="portfolio-text">
+					Lets you track all of your made expenses. You can authenticate via
+					Google and then Firebase will store the data. It features sorting by
+					date via a DatePicker, sort by amount, and it lets you create optional
+					notes.
+				</p>
+				<div class="portfolio__links">
+					<a
+						class="portfolio__links-btn portfolio__links-btn--1"
+						href="https://rv-expensify-app.herokuapp.com/"
+						target="_blank"
+						>Site</a
+					>
+					<a
+						class="portfolio__links-btn portfolio__links-btn--2"
+						href="https://github.com/RichardVerbraak/react-course-2-expensify-app"
+						target="_blank"
+					>
+						<svg class="portfolio__links-logo">
+							<use xlink:href="/img/sprite.svg#icon-code"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
 
-            <div class="portfolio__item">
-                <h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
-                <h2 class="heading-secondary heading-portfolio">Expensify</h2>
-                <p class="portfolio-text">Lets you track all of your made expenses. You can authenticate via Google and then Firebase will store the data. It features sorting by date via a DatePicker, sort by amount, and it lets you create optional notes.</p>
-                <div class="portfolio__links">
-                    <a class="portfolio__links-btn portfolio__links-btn--1" href="https://rv-expensify-app.herokuapp.com/" target="_blank">Site</a>
-                    <a class="portfolio__links-btn portfolio__links-btn--2" href="https://github.com/RichardVerbraak/react-course-2-expensify-app" target="_blank">
-                        <svg class="portfolio__links-logo">
-                            <use xlink:href="/img/sprite.svg#icon-code"></use>
-                        </svg>
-                    </a>
-                </div>   
-            </div>
-        </div>
+			<div class="portfolio__item">
+				<h3 class="heading-tertiary heading-portfolio">
+					Find your favorite movies
+				</h3>
+				<h2 class="heading-secondary heading-portfolio">Vizier</h2>
+				<p class="portfolio-text">
+					A React.js project I'm currently working on. It involves the MovieDB
+					API and will show you the latest popular movies, their rating, actors
+					and description. Watchlist and login are not functional as of right
+					now.
+				</p>
+				<div class="portfolio__links">
+					<a
+						class="portfolio__links-btn portfolio__links-btn--1"
+						href="https://rv-vizier.netlify.app/"
+						target="_blank"
+						>Site</a
+					>
+					<a
+						class="portfolio__links-btn portfolio__links-btn--2"
+						href="https://github.com/RichardVerbraak/Vizier"
+						target="_blank"
+					>
+						<svg class="portfolio__links-logo">
+							<use xlink:href="/img/sprite.svg#icon-code"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
 
-        <div class="contact">
-            <h3 class="heading-secondary contact__text">Contact Me</h3>
-        </div>
-        
+			<div class="portfolio__item">
+				<h3 class="heading-tertiary heading-portfolio">Track your expenses</h3>
+				<h2 class="heading-secondary heading-portfolio">Expensify</h2>
+				<p class="portfolio-text">
+					Lets you track all of your made expenses. You can authenticate via
+					Google and then Firebase will store the data. It features sorting by
+					date via a DatePicker, sort by amount, and it lets you create optional
+					notes.
+				</p>
+				<div class="portfolio__links">
+					<a
+						class="portfolio__links-btn portfolio__links-btn--1"
+						href="https://rv-expensify-app.herokuapp.com/"
+						target="_blank"
+						>Site</a
+					>
+					<a
+						class="portfolio__links-btn portfolio__links-btn--2"
+						href="https://github.com/RichardVerbraak/react-course-2-expensify-app"
+						target="_blank"
+					>
+						<svg class="portfolio__links-logo">
+							<use xlink:href="/img/sprite.svg#icon-code"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
 
-        
-        <footer class="footer">
+		<div class="contact">
+			<h3 class="heading-secondary contact__text">Contact Me</h3>
+		</div>
 
-            <div class="footer__logo-box">
-                <a href="https://github.com/RichardVerbraak" target="_blank">
-                    <svg class="footer__logo-box--logo">
-                        <use xlink:href="img/sprite.svg#icon-github"></use>
-                    </svg>
-                </a>
+		<footer class="footer">
+			<div class="footer__logo-box">
+				<a href="https://github.com/RichardVerbraak" target="_blank">
+					<svg class="footer__logo-box--logo">
+						<use xlink:href="img/sprite.svg#icon-github"></use>
+					</svg>
+				</a>
 
-                <a href="https://www.linkedin.com/in/richard-verbraak-895ba4173/" target="_blank">
-                    <svg class="footer__logo-box--logo">
-                        <use xlink:href="img/sprite.svg#icon-linkedin"></use>
-                    </svg>
-                </a>                
-            </div>
+				<a
+					href="https://www.linkedin.com/in/richard-verbraak-895ba4173/"
+					target="_blank"
+				>
+					<svg class="footer__logo-box--logo">
+						<use xlink:href="img/sprite.svg#icon-linkedin"></use>
+					</svg>
+				</a>
+			</div>
 
-            <div class="footer__copyright">
-               &copy; 2020 | Richard Verbraak
-            </div>
-                        
-        </footer>       
-    
-    </body>
+			<div class="footer__copyright">
+				&copy; 2020 | Richard Verbraak
+			</div>
+		</footer>
+	</body>
 </html>
