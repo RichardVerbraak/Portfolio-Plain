@@ -2,143 +2,119 @@
 // Added in CSS hack that accelerates hardware for fixing laggy transitions, not sure if it works
 
 .portfolio {
-    background-image: linear-gradient(rgba($color-primary, .8)), url(/img/portfolio-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    grid-column: full-start / full-end;    
+	background-image: linear-gradient(rgba($color-primary, 0.8)),
+		url(/img/portfolio-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	grid-column: full-start / full-end;
 
-    padding: 7rem;
-    color: #fff;
-    
-    display: grid;    
-    justify-content: center;
-    gap: 5rem;
+	padding: 7rem;
+	color: #fff;
 
-    grid-template-columns: repeat(2, 40%);
+	display: grid;
+	justify-content: center;
+	gap: 5rem;
 
-    @media screen and (max-width: $bp-600) {
-        padding: 3.5rem;
-    }
+	grid-template-columns: repeat(2, 40%);
 
-    @media screen and (max-width: $bp-800) {
-        grid-template-columns: 1fr;
-    }
-    
+	@media screen and (max-width: $bp-600) {
+		padding: 3.5rem;
+	}
 
-    &__item {        
-        position: relative;       
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        grid-template-rows: min-content 1fr;
+	@media screen and (max-width: $bp-800) {
+		grid-template-columns: 1fr;
+	}
 
-        padding: 2rem;
-        border: 1px solid #fff;
-        height: 30rem;
+	&__item {
+		position: relative;
+		display: grid;
+		justify-items: center;
+		align-items: center;
+		grid-template-rows: min-content 1fr;
 
-        // Sets up the gradient animation (240%)
-        background-image: linear-gradient(-60deg,  rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 49.9%, transparent 50%);
-        background-size: 255%;
-        transition: background-position 0.75s ease-out;
+		padding: 2rem;
+		border: 1px solid #fff;
+		height: 30rem;
 
-        /* Enable hardware acceleration to fix laggy transitions */
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);
+		// Sets up the gradient animation (240%)
+		background-image: linear-gradient(
+			-60deg,
+			rgba(255, 255, 255, 0.9) 0%,
+			rgba(255, 255, 255, 0.9) 49.9%,
+			transparent 50%
+		);
+		background-size: 255%;
+		transition: background-position 0.75s ease-out;
 
-        &:hover {
-            background-position: 100%;                
-        }
+		/* Enable hardware acceleration to fix laggy transitions */
+		-webkit-transform: translateZ(0);
+		-moz-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		-o-transform: translateZ(0);
+		transform: translateZ(0);
 
-        &:hover > .heading-portfolio {
-            opacity: 0;
-            visibility: hidden;
-        }
+		&:hover {
+			background-position: 100%;
+		}
 
-        &:hover > .portfolio-text {
-            opacity: 1;
-            visibility: visible;
-        }
+		&:hover > .heading-portfolio {
+			opacity: 0;
+			visibility: hidden;
+		}
 
-        &:hover > .portfolio__links > .portfolio__links-btn {
-            opacity: 1;
-            visibility: visible;
-        }       
-    } 
+		&:hover > .portfolio-text {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&:hover > .portfolio__links > .portfolio__links-btn {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }
 
 .heading-portfolio {
-    transition: all 0.45s;
+	transition: all 0.45s;
 }
 
 .portfolio-text {
-   position: absolute;
-   top: 0;
-   left: 0;
-   padding: 3rem;
-   opacity: 0;
-   visibility: hidden;
-   transition: all .55s cubic-bezier(0.645, 0.045, 0.355, 1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 3rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-   /* Enable hardware acceleration to fix laggy transitions */
-   -webkit-transform: translateZ(0);
-   -moz-transform: translateZ(0);
-   -ms-transform: translateZ(0);
-   -o-transform: translateZ(0);
-   transform: translateZ(0);
-   color: $color-primary;
+	/* Enable hardware acceleration to fix laggy transitions */
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	color: $color-primary;
 }
 
-.portfolio__links { 
-    display: flex;   
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    
-    
-    
-    &-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 10rem;
-        height: 4rem;
-        text-decoration: none;
-        color: #fff;
-        background-color: $color-primary;
-        box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
-        padding: 2rem;
-        opacity: 0;
-        visibility: hidden;
-        transition: all .55s cubic-bezier(0.645, 0.045, 0.355, 1), transform .4s;
+.portfolio__links {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
 
-        /* Enable hardware acceleration to fix laggy transitions */
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);
+	&-btn {
+		opacity: 0;
+		visibility: hidden;
 
-        &:hover {
-            background-color: $color-primary-dark;
-            transform: translateY(-2px);
-        }
+		&--2 {
+			line-height: 0;
+		}
+	}
 
-        &:active {
-            transform: translateY(0);
-        }
-
-        &--2 {
-            line-height: 0;
-        }
-    }
-
-    &-logo {
-        display: inline-block;
-        height: 2.5rem;
-        width: 100%;
-        fill: #fff;
-    }
+	&-logo {
+		display: inline-block;
+		height: 2.5rem;
+		width: 100%;
+		fill: #fff;
+	}
 }

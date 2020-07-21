@@ -33,15 +33,17 @@
 				<span class="about__content--span">CSS3</span>
 				and
 				<span class="about__content--span">JavaScript</span>. I primarily use
-				<span class="about__content--span">Sass</span> for styling, which makes
-				developing a lot easier with it's nesting, variables and mixins. I also
-				have experience with
+				<span class="about__content--span">Sass</span> for styling. I also have
+				experience with the
 				<span class="about__content--span">React.js</span> and I am familiar
-				with libraries like
-				<span class="about__content--span">React-Redux</span> and
-				<span class="about__content--span">React-Router</span>. For tooling I
-				primarily use <span class="about__content--span">NPM</span> and
-				<span class="about__content--span">Git</span>. And my go to for writing
+				with hooks and <span class="about__content--span">React-Redux</span> to
+				manage state. I'm also acquainted with
+				<span class="about__content--span">MongoDB</span>,
+				<span class="about__content--span">Express</span> and
+				<span class="about__content--span">Node.js</span>, although I'm
+				primarily focused on Front-End. For tooling I primarily use
+				<span class="about__content--span">NPM</span> and
+				<span class="about__content--span">Git</span>. My go to for writing
 				tests in either JS or React is a testing framework called
 				<span class="about__content--span">Jest</span>.
 			</p>
@@ -52,12 +54,12 @@
 			<p class="about__content--text">
 				Hi, my name is Richard Verbraak and I'm an aspiring Web Developer from
 				the Netherlands. I got hooked the moment I started learning about Web
-				Development, which was back at the start of February, 2019. I'm 100%
-				focused on Front-End thus far, although I am interested in learning
-				Back-End tech like NodeJS, Express or MongoDB. I am fond of making
-				minimalistic type of designs and creating sleek animations without them
-				being too obtrusive. Outside of all this, I enjoy playing games and
-				watch TV Shows & Movies.
+				Development, which was back at the start of February, 2019. I'm always
+				eager to learn new things and try my best to be helpful if anyone needs
+				it. I got most of my knowledge from a mix of Udemy courses, content
+				creators like Brad Traversy on YouTube and Web Development tracks on
+				TeamTreeHouse. Outside of all this, I enjoy playing games and watch TV
+				Shows & Movies.
 			</p>
 		</div>
 
@@ -75,14 +77,14 @@
 				</p>
 				<div class="portfolio__links">
 					<a
-						class="portfolio__links-btn portfolio__links-btn--1"
+						class="btn portfolio__links-btn portfolio__links-btn--1"
 						href="https://rv-recipeapp.netlify.com/"
 						target="_blank"
 						rel="noreferrer"
 						>Site</a
 					>
 					<a
-						class="portfolio__links-btn portfolio__links-btn--2"
+						class="btn portfolio__links-btn portfolio__links-btn--2"
 						href="https://github.com/RichardVerbraak/Recipe-App-Remastered"
 						target="_blank"
 						rel="noreferrer"
@@ -105,14 +107,14 @@
 				</p>
 				<div class="portfolio__links">
 					<a
-						class="portfolio__links-btn portfolio__links-btn--1"
+						class="btn portfolio__links-btn portfolio__links-btn--1"
 						href="https://rv-expensify-app.herokuapp.com/"
 						target="_blank"
 						rel="noreferrer"
 						>Site</a
 					>
 					<a
-						class="portfolio__links-btn portfolio__links-btn--2"
+						class="btn portfolio__links-btn portfolio__links-btn--2"
 						href="https://github.com/RichardVerbraak/react-course-2-expensify-app"
 						target="_blank"
 						rel="noreferrer"
@@ -137,14 +139,14 @@
 				</p>
 				<div class="portfolio__links">
 					<a
-						class="portfolio__links-btn portfolio__links-btn--1"
+						class="btn portfolio__links-btn portfolio__links-btn--1"
 						href="https://rv-vizier.netlify.app/"
 						target="_blank"
 						rel="noreferrer"
 						>Site</a
 					>
 					<a
-						class="portfolio__links-btn portfolio__links-btn--2"
+						class="btn portfolio__links-btn portfolio__links-btn--2"
 						href="https://github.com/RichardVerbraak/Vizier"
 						target="_blank"
 						rel="noreferrer"
@@ -167,14 +169,14 @@
 				</p>
 				<div class="portfolio__links">
 					<a
-						class="portfolio__links-btn portfolio__links-btn--1"
+						class="btn portfolio__links-btn portfolio__links-btn--1"
 						href="https://rv-expensify-app.herokuapp.com/"
 						target="_blank"
 						rel="noreferrer"
 						>Site</a
 					>
 					<a
-						class="portfolio__links-btn portfolio__links-btn--2"
+						class="btn portfolio__links-btn portfolio__links-btn--2"
 						href="https://github.com/RichardVerbraak/react-course-2-expensify-app"
 						target="_blank"
 						rel="noreferrer"
@@ -190,6 +192,21 @@
 		<div class="contact">
 			<h3 class="heading-secondary contact__text">Contact Me</h3>
 		</div>
+
+		<form class="form" action="https://formspree.io/xeqrvojd" method="POST">
+			<label>
+				Your email:
+				<input class="form__input" type="text" name="_replyto" required />
+			</label>
+			<label>
+				Your message:
+				<textarea class="form__area" name="message" required></textarea>
+			</label>
+
+			<button class="btn form__btn" type="submit">
+				Send
+			</button>
+		</form>
 
 		<footer class="footer">
 			<div class="footer__logo-box">

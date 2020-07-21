@@ -30,6 +30,10 @@ body {
   background-color: #f7f7f7;
 }
 
+button {
+  border: none;
+}
+
 ::-moz-selection {
   background-color: #68c74d;
   color: #fff;
@@ -43,9 +47,9 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh (min-content)[2] min-content 25vh;
-      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content 25vh;
-      grid-template-rows: 100vh repeat(2, min-content) min-content 25vh;
+  -ms-grid-rows: 100vh (min-content)[2] min-content 20vh 20vh 25vh;
+      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content 20vh 20vh 25vh;
+      grid-template-rows: 100vh repeat(2, min-content) min-content 20vh 20vh 25vh;
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -325,6 +329,46 @@ body {
   width: 10rem;
   height: 1px;
   background-color: #68c74d;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10rem;
+  height: 4rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #68c74d;
+  -webkit-box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
+          box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
+  padding: 2rem;
+  -webkit-transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
+  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
+  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s;
+  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s, -webkit-transform 0.4s;
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.btn:hover {
+  background-color: #52b138;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.btn:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .header {
@@ -732,43 +776,8 @@ body {
 }
 
 .portfolio__links-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 10rem;
-  height: 4rem;
-  text-decoration: none;
-  color: #fff;
-  background-color: #68c74d;
-  -webkit-box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
-          box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
-  padding: 2rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
-  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
-  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s;
-  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s, -webkit-transform 0.4s;
-  /* Enable hardware acceleration to fix laggy transitions */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-.portfolio__links-btn:hover {
-  background-color: #52b138;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-}
-
-.portfolio__links-btn:active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .portfolio__links-btn--2 {
@@ -811,11 +820,22 @@ body {
 }
 
 .contact__text::after {
-  content: "";
+  content: '';
   background-color: #088400;
   height: 1px;
   width: 10rem;
   display: inline-block;
+}
+
+.form {
+  grid-column: col-start 3 / col-end 6;
+  display: -ms-grid;
+  display: grid;
+}
+
+.form__btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
 }
 
 .footer {
