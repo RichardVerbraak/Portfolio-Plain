@@ -47,9 +47,9 @@ button {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh (min-content)[2] min-content 20vh 20vh 25vh;
-      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content 20vh 20vh 25vh;
-      grid-template-rows: 100vh repeat(2, min-content) min-content 20vh 20vh 25vh;
+  -ms-grid-rows: 100vh (min-content)[2] min-content 1fr 25vh;
+      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content 1fr 25vh;
+      grid-template-rows: 100vh repeat(2, min-content) min-content 1fr 25vh;
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -57,25 +57,25 @@ button {
 
 @media screen and (max-width: 68.75em) {
   .container {
-    -ms-grid-rows: 90vh (min-content)[2] min-content 30vh;
-        grid-template-rows: 90vh repeat(2, -webkit-min-content) -webkit-min-content 30vh;
-        grid-template-rows: 90vh repeat(2, min-content) min-content 30vh;
+    -ms-grid-rows: 90vh (min-content)[2] min-content 1fr 25vh;
+        grid-template-rows: 90vh repeat(2, -webkit-min-content) -webkit-min-content 1fr 25vh;
+        grid-template-rows: 90vh repeat(2, min-content) min-content 1fr 25vh;
   }
 }
 
 @media screen and (max-width: 62.5em) {
   .container {
-    -ms-grid-rows: 85vh (min-content)[2] min-content 30vh;
-        grid-template-rows: 85vh repeat(2, -webkit-min-content) -webkit-min-content 30vh;
-        grid-template-rows: 85vh repeat(2, min-content) min-content 30vh;
+    -ms-grid-rows: 85vh (min-content)[2] min-content 1fr 25vh;
+        grid-template-rows: 85vh repeat(2, -webkit-min-content) -webkit-min-content 1fr 25vh;
+        grid-template-rows: 85vh repeat(2, min-content) min-content 1fr 25vh;
   }
 }
 
 @media screen and (max-width: 50em) {
   .container {
-    -ms-grid-rows: 60vh (min-content)[2] min-content 30vh;
-        grid-template-rows: 60vh repeat(2, -webkit-min-content) -webkit-min-content 30vh;
-        grid-template-rows: 60vh repeat(2, min-content) min-content 30vh;
+    -ms-grid-rows: 60vh (min-content)[2] min-content 1fr 25vh;
+        grid-template-rows: 60vh repeat(2, -webkit-min-content) -webkit-min-content 1fr 25vh;
+        grid-template-rows: 60vh repeat(2, min-content) min-content 1fr 25vh;
   }
 }
 
@@ -348,6 +348,7 @@ body {
   text-decoration: none;
   color: #fff;
   background-color: #68c74d;
+  border-radius: 3px;
   -webkit-box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
           box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
   padding: 2rem;
@@ -792,19 +793,12 @@ body {
 }
 
 .contact {
-  grid-column: center-start / center-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.contact__text {
+  grid-column: col-start 3 / col-end 6;
+  -webkit-box-shadow: 0px 2.5px 4px rgba(0, 0, 0, 0.26);
+          box-shadow: 0px 2.5px 4px rgba(0, 0, 0, 0.26);
+  background: #ffffff;
+  border-radius: 5px;
+  width: 60rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -812,30 +806,104 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 3rem;
-  font-weight: 200;
+  margin: 5rem;
 }
 
-.contact__text::after {
+.contact__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 4.2rem;
+  font-weight: 300;
+  margin-bottom: 7rem;
+  color: #fff;
+}
+
+.contact__heading::after {
   content: '';
-  background-color: #088400;
+  background-color: #fff;
   height: 1px;
   width: 10rem;
   display: inline-block;
 }
 
-.form {
-  grid-column: col-start 3 / col-end 6;
-  display: -ms-grid;
-  display: grid;
+.contact__form {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: 4rem;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(144deg, rgba(104, 199, 77, 0.9) 0%, rgba(104, 199, 77, 0.9) 49.9%, transparent 50%);
+  background-size: 140%;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
-.form__btn {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.4rem;
+.contact__form--input {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  width: 75%;
+  height: 5rem;
+  padding: 1.4rem;
+  margin-bottom: 4.9rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 2px;
+  -webkit-transition: 0.125s all ease-in-out;
+  transition: 0.125s all ease-in-out;
+}
+
+.contact__form--input:focus {
+  outline: none;
+  border-bottom: 3px solid #68c74d;
+}
+
+.contact__form--input:focus-within {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.contact__form--area {
+  font-family: inherit;
+  font-size: 1.3rem;
+  width: 75%;
+  height: 26rem;
+  margin-bottom: 4.9rem;
+  padding: 1.4rem;
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.125s all ease-in-out;
+  transition: 0.125s all ease-in-out;
+  resize: none;
+}
+
+.contact__form--area:focus {
+  outline: none;
+}
+
+.contact__form--area:focus-within {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  border-bottom: 3px solid #68c74d;
+}
+
+.contact__form--btn {
+  font-family: inherit;
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 
 .footer {

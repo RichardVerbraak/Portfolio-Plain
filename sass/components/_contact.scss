@@ -1,23 +1,170 @@
 .contact {
-	grid-column: center-start / center-end;
+	grid-column: col-start 3 / col-end 6;
+	box-shadow: 0px 2.5px 4px rgba(0, 0, 0, 0.26);
+	background: #ffffff;
+	border-radius: 5px;
+	width: 60rem;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-direction: column;
+	margin: 5rem;
 
-	&__text {
+	&__heading {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-
-		font-size: 3rem;
-		font-weight: 200;
+		align-items: flex-start;
+		font-size: 4.2rem;
+		font-weight: 300;
+		margin-bottom: 7rem;
+		color: #fff;
 
 		&::after {
 			content: '';
-			background-color: $color-text;
+			background-color: #fff;
 			height: 1px;
 			width: 10rem;
 			display: inline-block;
 		}
 	}
+
+	&__form {
+		font-family: 'Raleway', sans-serif;
+		font-size: 1.3rem;
+		font-weight: 300;
+		padding: 4rem;
+
+		width: 100%;
+		height: 100%;
+
+		// Slanted green background
+		background-image: linear-gradient(
+			144deg,
+			rgba(104, 199, 77, 0.9) 0%,
+			rgba(104, 199, 77, 0.9) 49.9%,
+			transparent 50%
+		);
+		background-size: 140%;
+		background-position: right;
+		background-repeat: no-repeat;
+
+		&--input {
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+
+			width: 75%;
+			height: 5rem;
+
+			padding: 1.4rem;
+			margin-bottom: 4.9rem;
+
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+			border: none;
+			border-bottom: 3px solid transparent;
+			border-radius: 2px;
+
+			transition: 0.125s all ease-in-out;
+
+			&:focus {
+				outline: none;
+				border-bottom: 3px solid $color-primary;
+			}
+
+			&:focus-within {
+				transform: scale(1.03);
+			}
+		}
+
+		&--area {
+			font-family: inherit;
+			font-size: 1.3rem;
+			width: 75%;
+			height: 26rem;
+
+			margin-bottom: 4.9rem;
+			padding: 1.4rem;
+
+			border: none;
+			border-radius: 2px;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+			transition: 0.125s all ease-in-out;
+
+			// Could remove
+			resize: none;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-within {
+				transform: scale(1.03);
+				border-bottom: 3px solid $color-primary;
+			}
+		}
+
+		&--btn {
+			font-family: inherit;
+			font-size: 1.7rem;
+			font-weight: 400;
+		}
+	}
 }
+
+// .contact {
+// 	grid-column: center-start / center-end;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	flex-direction: column;
+// 	padding: 4rem;
+
+// 	&__text {
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+
+// 		font-size: 3rem;
+// 		font-weight: 200;
+
+// 		&::after {
+// 			content: '';
+// 			background-color: $color-text;
+// 			height: 1px;
+// 			width: 10rem;
+// 			display: inline-block;
+// 		}
+// 	}
+
+// 	&__form {
+// 		display: flex;
+// 		flex-direction: column;
+// 		padding: 4rem;
+
+// 		font-family: 'Raleway', sans-serif;
+// 		font-size: 1.6rem;
+
+// 		&--input {
+// 			font-family: inherit;
+// 			font-size: 1.6rem;
+// 			outline-color: $color-primary;
+// 			background-color: rgba(255, 255, 255, 0.5);
+// 			border-radius: 2px;
+// 			border: none;
+// 			box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+// 			padding: 1rem;
+// 		}
+
+// 		&--label {
+// 			padding: 1.5rem 1.5rem 1.5rem 0;
+// 		}
+
+// 		&--area {
+// 		}
+
+// 		&--btn {
+// 			font-family: inherit;
+// 			font-size: 1.4rem;
+// 		}
+// 	}
+// }

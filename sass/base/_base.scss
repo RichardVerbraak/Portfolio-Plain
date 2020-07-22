@@ -36,7 +36,7 @@ button {
 // 5 columns of 20vw doesnt fill the whole screen
 .container {
 	display: grid;
-	grid-template-rows: 100vh repeat(2, min-content) min-content 20vh 20vh 25vh;
+	grid-template-rows: 100vh repeat(2, min-content) min-content 1fr 25vh;
 	grid-template-columns:
 		[full-start] minmax(6rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
@@ -44,15 +44,15 @@ button {
 		minmax(6rem, 1fr) [full-end];
 
 	@media screen and (max-width: $bp-1100) {
-		grid-template-rows: 90vh repeat(2, min-content) min-content 30vh;
+		grid-template-rows: 90vh repeat(2, min-content) min-content 1fr 25vh;
 	}
 
 	@media screen and (max-width: $bp-1000) {
-		grid-template-rows: 85vh repeat(2, min-content) min-content 30vh;
+		grid-template-rows: 85vh repeat(2, min-content) min-content 1fr 25vh;
 	}
 
 	@media screen and (max-width: $bp-800) {
-		grid-template-rows: 60vh repeat(2, min-content) min-content 30vh;
+		grid-template-rows: 60vh repeat(2, min-content) min-content 1fr 25vh;
 	}
 
 	@media screen and (max-width: $bp-800) {

@@ -190,23 +190,33 @@
 		</div>
 
 		<div class="contact">
-			<h3 class="heading-secondary contact__text">Contact Me</h3>
+			<form
+				class="contact__form"
+				action="https://formspree.io/xeqrvojd"
+				method="POST"
+			>
+				<h3 class="heading-secondary contact__heading">Contact Me</h3>
+
+				<input
+					class="contact__form--input"
+					type="text"
+					name="_replyto"
+					placeholder="Email"
+					required
+				/>
+
+				<textarea
+					class="contact__form--area"
+					name="message"
+					placeholder="Message"
+					required
+				></textarea>
+
+				<button class="btn contact__form--btn" type="submit">
+					Send
+				</button>
+			</form>
 		</div>
-
-		<form class="form" action="https://formspree.io/xeqrvojd" method="POST">
-			<label>
-				Your email:
-				<input class="form__input" type="text" name="_replyto" required />
-			</label>
-			<label>
-				Your message:
-				<textarea class="form__area" name="message" required></textarea>
-			</label>
-
-			<button class="btn form__btn" type="submit">
-				Send
-			</button>
-		</form>
 
 		<footer class="footer">
 			<div class="footer__logo-box">
