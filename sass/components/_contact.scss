@@ -1,20 +1,20 @@
 .contact {
-	grid-column: col-start 3 / col-end 6;
+	grid-column: col-start 2 / col-end 6;
 	box-shadow: 0px 2.5px 4px rgba(0, 0, 0, 0.26);
 	background: #ffffff;
 	border-radius: 5px;
 	width: 60rem;
-	display: flex;
-	flex-direction: column;
+	height: 60rem;
+
 	margin: 5rem;
 
 	&__heading {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		font-size: 4.2rem;
 		font-weight: 300;
-		margin-bottom: 7rem;
+		margin-bottom: 4.5rem;
 		color: #fff;
 
 		&::after {
@@ -27,13 +27,18 @@
 	}
 
 	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+
 		font-family: 'Raleway', sans-serif;
 		font-size: 1.3rem;
 		font-weight: 300;
 		padding: 4rem;
 
-		width: 100%;
-		height: 100%;
+		width: 60rem;
+		height: 60rem;
 
 		// Slanted green background
 		background-image: linear-gradient(
@@ -42,20 +47,20 @@
 			rgba(104, 199, 77, 0.9) 49.9%,
 			transparent 50%
 		);
-		background-size: 140%;
+		background-size: 137%;
 		background-position: right;
 		background-repeat: no-repeat;
 
 		&--input {
 			font-family: inherit;
-			font-size: inherit;
-			font-weight: inherit;
+			font-size: 1.6rem;
+			font-weight: 400;
 
 			width: 75%;
 			height: 5rem;
 
 			padding: 1.4rem;
-			margin-bottom: 4.9rem;
+			margin-bottom: 2.9rem;
 
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -68,6 +73,10 @@
 			&:focus {
 				outline: none;
 				border-bottom: 3px solid $color-primary;
+
+				&:invalid {
+					border-bottom: 3px solid #fd9752;
+				}
 			}
 
 			&:focus-within {
@@ -79,9 +88,9 @@
 			font-family: inherit;
 			font-size: 1.3rem;
 			width: 75%;
-			height: 26rem;
+			height: 20rem;
 
-			margin-bottom: 4.9rem;
+			margin-bottom: 2.9rem;
 			padding: 1.4rem;
 
 			border: none;

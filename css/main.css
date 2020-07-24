@@ -47,9 +47,9 @@ button {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh (min-content)[2] min-content 1fr 25vh;
-      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content 1fr 25vh;
-      grid-template-rows: 100vh repeat(2, min-content) min-content 1fr 25vh;
+  -ms-grid-rows: 100vh (min-content)[2] min-content min-content 25vh;
+      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content -webkit-min-content 25vh;
+      grid-template-rows: 100vh repeat(2, min-content) min-content min-content 25vh;
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -793,19 +793,13 @@ body {
 }
 
 .contact {
-  grid-column: col-start 3 / col-end 6;
+  grid-column: col-start 2 / col-end 6;
   -webkit-box-shadow: 0px 2.5px 4px rgba(0, 0, 0, 0.26);
           box-shadow: 0px 2.5px 4px rgba(0, 0, 0, 0.26);
   background: #ffffff;
   border-radius: 5px;
   width: 60rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  height: 60rem;
   margin: 5rem;
 }
 
@@ -817,12 +811,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 4.2rem;
   font-weight: 300;
-  margin-bottom: 7rem;
+  margin-bottom: 4.5rem;
   color: #fff;
 }
 
@@ -835,26 +829,39 @@ body {
 }
 
 .contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
   padding: 4rem;
-  width: 100%;
-  height: 100%;
+  width: 60rem;
+  height: 60rem;
   background-image: linear-gradient(144deg, rgba(104, 199, 77, 0.9) 0%, rgba(104, 199, 77, 0.9) 49.9%, transparent 50%);
-  background-size: 140%;
+  background-size: 137%;
   background-position: right;
   background-repeat: no-repeat;
 }
 
 .contact__form--input {
   font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: 1.6rem;
+  font-weight: 400;
   width: 75%;
   height: 5rem;
   padding: 1.4rem;
-  margin-bottom: 4.9rem;
+  margin-bottom: 2.9rem;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
@@ -869,6 +876,10 @@ body {
   border-bottom: 3px solid #68c74d;
 }
 
+.contact__form--input:focus:invalid {
+  border-bottom: 3px solid #fd9752;
+}
+
 .contact__form--input:focus-within {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
@@ -878,8 +889,8 @@ body {
   font-family: inherit;
   font-size: 1.3rem;
   width: 75%;
-  height: 26rem;
-  margin-bottom: 4.9rem;
+  height: 20rem;
+  margin-bottom: 2.9rem;
   padding: 1.4rem;
   border: none;
   border-radius: 2px;
