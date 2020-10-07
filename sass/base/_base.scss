@@ -34,9 +34,10 @@ button {
 }
 
 // 5 columns of 20vw doesnt fill the whole screen
+// !TODO Look for a better grid system
 .container {
 	display: grid;
-	grid-template-rows: 100vh repeat(2, min-content) min-content min-content 25vh;
+	grid-template-rows: 100vh repeat(2, min-content) min-content min-content min-content;
 	grid-template-columns:
 		[full-start] minmax(6rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
