@@ -47,9 +47,9 @@ button {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100vh (min-content)[2] min-content min-content 25vh;
-      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content -webkit-min-content 25vh;
-      grid-template-rows: 100vh repeat(2, min-content) min-content min-content 25vh;
+  -ms-grid-rows: 100vh (min-content)[2] min-content min-content min-content;
+      grid-template-rows: 100vh repeat(2, -webkit-min-content) -webkit-min-content -webkit-min-content -webkit-min-content;
+      grid-template-rows: 100vh repeat(2, min-content) min-content min-content min-content;
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -352,10 +352,8 @@ body {
   -webkit-box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
           box-shadow: 0px 5px 1px rgba(82, 177, 56, 0.9);
   padding: 2rem;
-  -webkit-transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
-  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s;
-  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s;
-  transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
   /* Enable hardware acceleration to fix laggy transitions */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
